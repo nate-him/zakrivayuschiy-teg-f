@@ -18,4 +18,9 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font);
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-attachment: fixed;
+  font-variation-settings: var(--text-weight);
 }
