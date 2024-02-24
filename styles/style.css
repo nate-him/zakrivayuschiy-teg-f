@@ -18,6 +18,7 @@
   flex-direction: column;
   min-inline-size: 375px;
   min-block-size: 100dvb;
+  margin-block: var(--indent);
   padding-inline: clamp(0rem, 34.742vw - 8.143rem, 23.125rem);
   font-family: var(--main-font);
   background-color: var(--bg-color);
@@ -28,6 +29,7 @@
   color: var(--accent-color);
   font-weight: var(--text-weight);
   font-variation-settings: 'wght' var(--text-weight);
+  font-size: 0.875rem;
 }
 
 .header {
@@ -36,7 +38,7 @@
   align-items: center;
   text-transform: uppercase;
   font-family: var(--accent-font);
-  margin-block: var(--indent);
+  margin-block-end: var(--indent);
   padding-block: clamp(7.5rem, 4.923vw + 6.346rem, 8.5rem) calc(var(--indent) / 4);
   border: 2px solid var(--accent-color);
   background-color: var(--bg-color);
@@ -52,11 +54,11 @@
   margin-block: calc(var(--indent) / 5) calc(var(--indent) / 4);
 }
 
-.theme-menu__button {
+.button {
   border: 1px solid transparent;
   text-transform: inherit;
-  /* line-height: 2; если не делать флексом список кнопок*/
-  background: transparent;
+  background-color: var(--bg-color);
+  font-size: inherit;
 }
 
 .theme-menu__list {
@@ -86,6 +88,12 @@
   position: absolute;
   pointer-events: none;
   left: -16px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--indent) / 2);
 }
 
 .main__section-cards {
@@ -130,10 +138,35 @@
   inline-size: 100%;
 }
 
-.card__like-button {
+.card__buttons {
+  display: flex;
+  justify-content: flex-end;
+}
 
+.card__like-button {
+  border: 2px solid var(--accent-color);
+  padding-block: 0.75rem;
+  padding-inline: 2.313rem;
+  line-height: 0.9;
 }
 
 .button__text {
+  font-family: var(--accent-font);
+  /* line-height: 0.9; */
 
+}
+
+.popup-button {
+  display: flex;
+  gap: 8px;
+  align-self: center;
+  border: 2px solid var(--accent-color);
+  padding-block: 15px;
+  padding-inline: 20px;
+  align-items: center;
+}
+
+.floppy {
+  width: 21px;
+  height: 21px;
 }
