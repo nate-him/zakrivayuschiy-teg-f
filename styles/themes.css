@@ -14,8 +14,8 @@
       linear-gradient(#e7e7e7, #1a1a1a);
   --main-font: 'Inter-Variable', Arial, sans-serif;
   --accent-font: 'PressStart2P', system-ui;
-  --title-weight: 400;
-  --text-weight: 700;
+  --title-weight: 700;
+  --text-weight: 400;
 }
 
 :root.theme-light {
@@ -29,7 +29,7 @@
     --accent-font: 'PressStart2P', system-ui;
     --title-weight: 400;
     --text-weight: 700;
-  }
+}
 
 :root.theme-dark {
   --bg-color: #000;
