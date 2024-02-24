@@ -7,6 +7,7 @@
 
 :root { /* потом перенести в variable, по умолчанию light*/
   --bg-color: #fff;
+  --shadow-color: rgba(255, 255, 255, 0.5);
   --accent-color: #000;
   --bg-image:
       repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
