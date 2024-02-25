@@ -102,16 +102,6 @@
 .theme-menu__button:focus-visible:after {
   transform: scaleX(1);
 }
-
-@keyframes triangle {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(4px);
-  }
-}
-
 .main {
   display: flex;
   flex-direction: column;
@@ -196,8 +186,11 @@
 
 .card__like-button {
   border: 2px solid var(--accent-color);
-  padding-block: 0.75rem;
-  padding-inline: 2.313rem;
+  inline-size: 130px;
+  block-size: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   line-height: 0.9;
 }
 
@@ -236,6 +229,46 @@
   color: var(--color-invert);
 }
 
+.popup {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+  padding: 30px clamp(1.875rem, -3.077vw + 3.221rem, 2.5rem);
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+  inline-size: clamp(21.313rem, 4.923vw + 20.159rem, 22.313rem);
+  position: fixed;
+  inset: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.popup:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.popup::backdrop {
+  background-color: rgb(0 0 0 / 0.3);
+  backdrop-filter: blur(7px);
+} 
+
+.popup__floppy {
+  width: 39px;
+  height: 39px;
+}
+
+.popup__text {
+  font-family: var(--accent-font);
+  color: var(--accent-color);
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.button-ok {
+  grid-column: span 2;
+  justify-content: center;
+}
+
 @media (width <= 375px) {
   .popup-button {
     flex-direction: column;
@@ -246,103 +279,6 @@
   }
 }
 
-.button-animation:focus-visible {
-  box-shadow: 2px 2px var(--accent-color);
-}
-
-.button-animation::before {
-  content: "";
-  display: block;
-  position: absolute;
-  inline-size: 100%;
-  block-size: 100%;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  background-color: var(--accent-color);
-  transform: scaleX(0);
-  transform-origin: 0 0;
-  transition: 0.5s ease-in-out;
-}
-
-.button-animation:hover::before {
-  transform: scaleX(1);
-}
-
-/*анимация сердца*/
 .sparks {
   opacity: 0;
-}
-
-.like-icon .core {
-  fill: transparent;
-  transition: fill 0.3s linear;
-}
-
-.like-icon .main-body {
-  fill: transparent;
-  transition: fill 0.3s 0.05s linear;
-}
-
-.like-icon .contour {
-  transition: fill 0.3s 0.06s linear;
-}
-
-.like-icon:hover .core {
-  fill: var(--contour-color);
-  transition-delay: 0.03s;
-}
-
-.like-icon:hover .main-body {
-  fill: var(--contour-color);
-  transition-delay: 0s;
-}
-
-.like-icon:active .core,
-.like-icon.is-liked .core {
-  fill: var(--sparks-color);
-  transition-delay: 0.03s;
-}
-
-.like-icon:active .main-body,
-.like-icon.is-liked .main-body {
-  fill: var(--sparks-color);
-  transition-delay: 0s;
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--sparks-color);
-  transition-duration: 0.1s;
-  transition-delay: 0s;
-}
-
-.like-icon.is-liked .heart {
-  animation: heart-scale 0.3s 0.1s ease-in alternate;
-  transform-origin: center;
-  transform-box: fill-box;
-}
-
-.like-icon.is-liked .sparks {
-  animation: sparks 0.3s 0.3s ease-in alternate;
-}
-
-/* .heart {
-
-} */
-
-@keyframes heart-scale {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes sparks {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }

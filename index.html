@@ -96,13 +96,26 @@
       </ul>
       <button
             class="popup-button button button-animation"
-            type="button">
+            type="button"
+            onclick="window['dialog-id'].showModal()"
+            aria-controls="dialog-id">
         <svg class="floppy" viewBox="0 0 40 40">
             <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
     </main>
+    <dialog id="dialog-id" class="popup">
+      <svg class="popup__floppy" viewBox="0 0 40 40">
+        <use href="./svg/floppy.svg#floppy"></use>
+      </svg>
+      <span class="popup__text">Вставьте дискету, чтобы продолжить</span>
+      <button class="button popup-button button-ok"
+        type="button" 
+        onclick="window['dialog-id'].close()">
+          <span class="button__text">Ок</span>
+      </button>
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
