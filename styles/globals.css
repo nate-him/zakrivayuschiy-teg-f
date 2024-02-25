@@ -30,11 +30,24 @@ a {
   color: inherit;
 }
 
+a:focus,
+button:focus {
+  outline: none;
+}
+
 button,
 input {
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+button {
+  appearance: none;
 }
 
 ul,

@@ -166,7 +166,7 @@
   inline-size: 100%;
 }
 
-.card__lable {
+.card__label {
   position: absolute;
   inset-inline-end: calc(var(--indent) / 4);
   inset-block-start: calc(var(--indent) / 4);
@@ -182,7 +182,7 @@
 }
 
 @supports((text-stroke: 1px var(--shadow-color)) or (-webkit-text-stroke: 1px var(--shadow-color))) {
-  p {
+  .card__label {
       -webkit-text-stroke: 1px var(--shadow-color);
       text-stroke: 1px var(--shadow-color);
       text-shadow: none;
@@ -192,6 +192,7 @@
 .card__buttons {
   display: flex;
   justify-content: flex-end;
+  gap: 8px;
 }
 
 .card__like-button {
@@ -201,10 +202,20 @@
   line-height: 0.9;
 }
 
+.card__icon-button {
+  align-self: center;
+}
+
 .button__text {
   font-family: var(--accent-font);
-  /* line-height: 0.9; */
+  color: var(--color-invert);
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+}
 
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
 }
 
 .popup-button {
@@ -220,6 +231,10 @@
 .floppy {
   width: 21px;
   height: 21px;
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: var(--color-invert);
 }
 
 @media (width <= 375px) {
@@ -230,6 +245,10 @@
     width: 28px;
     height: 28px;
   }
+}
+
+.button-animation:focus-visible {
+  box-shadow: 2px 2px var(--accent-color);
 }
 
 .button-animation::before {
@@ -248,5 +267,4 @@
 
 .button-animation:hover::before {
   transform: scaleX(1);
-  color: var(--bg-color);
 }

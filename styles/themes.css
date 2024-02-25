@@ -9,6 +9,7 @@
   --bg-color: #fff;
   --accent-color: #000;
   --shadow-color: rgba(255, 255, 255, 0.5);
+  --color-invert: #fff;
   --bg-image:
       repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
       repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
