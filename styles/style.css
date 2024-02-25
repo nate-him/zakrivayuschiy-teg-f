@@ -268,3 +268,8 @@
 .button-animation:hover::before {
   transform: scaleX(1);
 }
+
+/*анимация сердца*/
+.sparks {
+  opacity: 0;
+}

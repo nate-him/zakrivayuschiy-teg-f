@@ -19,6 +19,10 @@
   --title-weight: 700;
   --text-weight: 400;
   --indent: 100px;
+  --contour-color: #000;
+  --sparks-color: #FF0000;
+  --main-body-color: #000;
+  --core-color: #000;
 }
 
 :root.theme-light {
@@ -33,6 +37,7 @@
     --accent-font: 'PressStart2P', system-ui;
     --title-weight: 700;
     --text-weight: 400;
+    --contour-color: #000;
 }
 
 :root.theme-dark {
@@ -47,6 +52,7 @@
     --accent-font: 'PressStart2P', system-ui;
     --title-weight: 465;
     --text-weight: 785;
+    --contour-color: #007f0c;
 }
 
 @media (prefers-color-scheme: dark) {
