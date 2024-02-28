@@ -5,39 +5,29 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
-:root { /* потом перенести в variable, по умолчанию light*/
-  --bg-color: #fff;
-  --accent-color: #000;
-  --shadow-color: rgba(255, 255, 255, 0.5);
-  --color-invert: #fff;
+:root.theme-light {
+  --main-font: 'Inter-Variable', Arial, sans-serif;
+  --accent-font: 'PressStart2P', system-ui;
+  --logo-weight: 400;
+  --title-weight: 700;
+  --text-weight: 400;
+  --logo-size: clamp(3.063rem, 1.909rem + 4.9231vw, 4.063rem);
+  --title-size:clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+  --text-size: 1.125rem;
+  --extra-size: 0.875rem;
+  --indent: 100px;
   --bg-image:
       repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
       repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
       linear-gradient(#e7e7e7, #1a1a1a);
-  --main-font: 'Inter-Variable', Arial, sans-serif;
-  --accent-font: 'PressStart2P', system-ui;
-  --title-weight: 700;
-  --text-weight: 400;
-  --indent: 100px;
+  --bg-color: #fff;
+  --accent-color: #000;
+  --shadow-color: #fff;
+  --color-invert: #fff;
   --contour-color: #000;
   --sparks-color: #FF0000;
   --main-body-color: #000;
   --core-color: #000;
-}
-
-:root.theme-light {
-  --bg-color: #fff;
-  --accent-color: #000;
-  --shadow-color: rgba(255, 255, 255, 0.5);
-  --bg-image:
-    repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
-    repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
-    linear-gradient(#e7e7e7, #1a1a1a);
-    --main-font: 'Inter-Variable', Arial, sans-serif;
-    --accent-font: 'PressStart2P', system-ui;
-    --title-weight: 700;
-    --text-weight: 400;
-    --contour-color: #000;
 }
 
 :root.theme-dark {
@@ -48,11 +38,11 @@
     repeating-linear-gradient(#000 0 2px, transparent 2px 4px),
     repeating-linear-gradient(90deg, #000000 0 2px, transparent 2px 4px),
     linear-gradient(#007f0c, #004306);
-    --main-font: 'Inter-Variable', Arial, sans-serif;
-    --accent-font: 'PressStart2P', system-ui;
-    --title-weight: 465;
-    --text-weight: 785;
-    --contour-color: #007f0c;
+  --main-font: 'Inter-Variable', Arial, sans-serif;
+  --accent-font: 'PressStart2P', system-ui;
+  --logo-weight: 465;
+  --text-weight: 785;
+  --contour-color: #007f0c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -65,9 +55,10 @@
       repeating-linear-gradient(#000 0 2px, transparent 2px 4px),
       repeating-linear-gradient(90deg, #000000 0 2px, transparent 2px 4px),
       linear-gradient(#007f0c, #004306);
-      --main-font: 'Inter-Variable', Arial, sans-serif;
-      --accent-font: 'PressStart2P', system-ui;
-      --title-weight: 465;
-      --text-weight: 785;
+   --main-font: 'Inter-Variable', Arial, sans-serif;
+   --accent-font: 'PressStart2P', system-ui;
+   --logo-weight: 465;
+   --text-weight: 785;
+   --contour-color: #007f0c;
   }
 }
