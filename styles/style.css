@@ -86,7 +86,7 @@
   color: var(--accent-color);
   position: absolute;
   pointer-events: none;
-  left: -15px;
+  left: -21px;
   animation: triangle 0.5s ease-in-out infinite alternate;
 }
 
@@ -134,6 +134,7 @@
   flex-direction: column;
   gap: 1.688rem;
   line-height: 1.313rem;
+  font-variation-settings: "wght" var(--text-weight);
 }
 
 .card__label {
@@ -187,6 +188,8 @@
 .card__buttons {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
 }
 
 .card__like-button {
@@ -210,7 +213,7 @@
 }
 
 .card__icon-button:focus-visible {
-  border:  var(--border);
+  outline: var(--border);
 }
 
 .popup-button {
@@ -218,7 +221,7 @@
   gap: 0.5rem;
   align-self: center;
   border:  var(--border);
-  padding-block: 15px; /*пересчитать*/
+  padding-block: 15px;
   padding-inline: 20px;
   align-items: center;
 }
@@ -243,6 +246,9 @@
   position: fixed;
   inset: 0;
   transition: opacity 0.3s ease-in-out;
+  font-size: var(--extra-size);
+  background-color: var(--bg-color);
+  border: var(--border);
 }
 
 .popup:not([open]) {
@@ -258,6 +264,8 @@
 .popup__floppy {
   inline-size: 39px;
   block-size: 39px;
+  color: var(--accent-color);
+  align-self: center;
 }
 
 .popup__text {
@@ -267,14 +275,18 @@
   line-height: 1.5;
 }
 
-.button-ok {
+.popup__form {
   grid-column: span 2;
-  justify-content: center;
-  border:  var(--border);
+  justify-self: stretch;
+}
+
+.button-ok {
+  border: var(--border);
   padding-block: 10px;
   text-transform: uppercase;
   display: grid;
-  inset: 0;
+  justify-content: center;
+  inline-size: 100%;
 }
 
 @media (width <= 375px) {

@@ -413,24 +413,22 @@
       <button
             class="popup-button button button-animation"
             type="button"
-            onclick="window['dialog-id'].showModal()"
-            aria-controls="dialog-id">
+            onclick="window['dialog-ok'].showModal()"
+            aria-controls="dialog-ok">
         <svg class="floppy" viewBox="0 0 40 40">
             <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
     </main>
-    <dialog id="dialog-id" class="popup">
+    <dialog id="dialog-ok" class="popup">
       <svg class="popup__floppy" viewBox="0 0 40 40">
         <use href="./svg/floppy.svg#floppy"></use>
       </svg>
       <span class="popup__text">Вставьте дискету, чтобы продолжить</span>
-      <form method="dialog" class="button-ok">
-        <button class="button"
-          type="button" 
-          onclick="window['dialog-id'].close()">
-            <span class="button__text">Ок</span>
+      <form method="dialog" class="popup__form">
+        <button class="button button-ok">
+          <span class="button__text">Ок</span>
         </button>
       </form>
     </dialog>
