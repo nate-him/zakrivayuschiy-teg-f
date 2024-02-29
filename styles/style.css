@@ -16,7 +16,7 @@
 .page {
   display: flex;
   flex-direction: column;
-  min-inline-size: 375px;
+  min-inline-size: 320px;
   max-inline-size: 700px;
   min-block-size: 100dvb;
   margin: var(--indent) auto;
