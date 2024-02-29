@@ -22,4 +22,5 @@
   --sparks-color: #FF0000;
   --main-body-color: #000;
   --core-color: #000;
+  --border: 2px solid var(--accent-color);
 }
