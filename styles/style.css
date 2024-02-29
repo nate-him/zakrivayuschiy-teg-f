@@ -175,7 +175,7 @@
   border-bottom: var(--border);
 }
 
-.card__img{
+.card__img {
   display: block;
   object-fit: cover;
   object-position: center;
