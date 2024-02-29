@@ -426,10 +426,11 @@
         <use href="./svg/floppy.svg#floppy"></use>
       </svg>
       <span class="popup__text">Вставьте дискету, чтобы продолжить</span>
-      <form method="dialog" class="button-ok">
+      <form method="dialog"
+            class="button-ok"
+            onclick="window['dialog-id'].close()">
         <button class="button"
-          type="button" 
-          onclick="window['dialog-id'].close()">
+          type="button">
             <span class="button__text">Ок</span>
         </button>
       </form>
