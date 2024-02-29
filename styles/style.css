@@ -69,6 +69,7 @@
   font-size: var(--extra-size);
   font-family: var(--accent-font);
   line-height: 0.9;
+  color: var(--accent-color);
 }
 
 .theme-menu__button:hover {
@@ -287,6 +288,7 @@
   display: grid;
   justify-content: center;
   inline-size: 100%;
+  color: var(--accent-color);
 }
 
 @media (width <= 375px) {
