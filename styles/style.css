@@ -38,7 +38,8 @@
   text-transform: uppercase;
   font-family: var(--accent-font);
   margin-block-end: var(--indent);
-  padding-block: clamp(7.5rem, 4.923vw + 6.346rem, 8.5rem) calc(var(--indent) / 4);
+  padding-block: clamp(7.5rem, 4.923vw + 6.346rem, 8.5rem)
+    calc(var(--indent) / 4);
   border: var(--border);
   background-color: var(--bg-color);
 }
@@ -127,7 +128,7 @@
 
 .card {
   background-color: var(--bg-color);
-  border:  var(--border);
+  border: var(--border);
 }
 
 .card__title {
@@ -201,7 +202,7 @@
 }
 
 .card__like-button {
-  border:  var(--border);
+  border: var(--border);
   inline-size: 130px;
   block-size: 40px;
   display: flex;
@@ -213,7 +214,6 @@
   align-self: center;
   transition: border-color 0.3s ease;
   border: 2px solid transparent;
-
 }
 
 .button__text {
@@ -253,12 +253,11 @@
   transform: scaleX(1);
 }
 
-
 .popup-button {
   display: flex;
   gap: 0.5rem;
   align-self: center;
-  border:  var(--border);
+  border: var(--border);
   padding-block: 15px;
   padding-inline: 20px;
   align-items: center;
@@ -325,14 +324,6 @@
   justify-content: center;
   inline-size: 100%;
   color: var(--accent-color);
-}
-
-.button-floppy:hover {
-
-}
-
-.button-floppy:focus-visible {
-
 }
 
 @media (width <= 375px) {

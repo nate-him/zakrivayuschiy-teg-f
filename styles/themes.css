@@ -9,10 +9,9 @@
   --logo-weight: 400;
   --title-weight: 700;
   --text-weight: 400;
-  --bg-image:
-      repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
-      repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
-      linear-gradient(#e7e7e7, #1a1a1a);
+  --bg-image: repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7, #1a1a1a);
   --bg-color: #fff;
   --accent-color: #000;
   --shadow-color: rgba(255, 255, 255, 0.5);
@@ -25,32 +24,29 @@
   --logo-weight: 465;
   --title-weight: 785;
   --text-weight: 465;
-  --bg-image:
-    repeating-linear-gradient(#000 0 2px, transparent 2px 4px),
+  --bg-image: repeating-linear-gradient(#000 0 2px, transparent 2px 4px),
     repeating-linear-gradient(90deg, #000000 0 2px, transparent 2px 4px),
     linear-gradient(#007f0c, #004306);
   --bg-color: #000;
-  --accent-color: #00CC14;
+  --accent-color: #00cc14;
   --shadow-color: rgba(0, 0, 0, 0.5);
-  --color-invert: #00CC14;
-  --contour-color: #00CC14;
+  --color-invert: #00cc14;
+  --contour-color: #00cc14;
   --border: 2px solid var(--accent-color);
 }
 
 @media (prefers-color-scheme: dark) {
-
   :root {
     --logo-weight: 465;
     --title-weight: 785;
     --text-weight: 465;
-    --bg-image:
-      repeating-linear-gradient(#000 0 2px, transparent 2px 4px),
+    --bg-image: repeating-linear-gradient(#000 0 2px, transparent 2px 4px),
       repeating-linear-gradient(90deg, #000000 0 2px, transparent 2px 4px),
       linear-gradient(#007f0c, #004306);
     --bg-color: #000;
-    --accent-color: #00CC14;
+    --accent-color: #00cc14;
     --shadow-color: rgba(0, 0, 0, 0.5);
-    --color-invert: #00CC14;
+    --color-invert: #00cc14;
     --contour-color: #007f0c;
     --border: 2px solid var(--accent-color);
   }
