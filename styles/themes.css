@@ -33,7 +33,7 @@
   --accent-color: #00CC14;
   --shadow-color: rgba(0, 0, 0, 0.5);
   --color-invert: #00CC14;
-  --contour-color: #007f0c;
+  --contour-color: #00CC14;
   --border: 2px solid var(--accent-color);
 }
 

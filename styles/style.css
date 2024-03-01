@@ -72,9 +72,16 @@
   color: var(--accent-color);
 }
 
+.theme-menu__button {
+  transition: opacity 0.3s;
+}
+
 .theme-menu__button:hover {
   opacity: 0.6;
-  transition: 0.3s;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
 }
 
 .theme-menu__button:disabled {
@@ -87,7 +94,8 @@
   color: var(--accent-color);
   position: absolute;
   pointer-events: none;
-  left: -21px;
+  inset-block-start: 0px;
+  inset-inline-start: -21px;
   animation: triangle 0.5s ease-in-out infinite alternate;
 }
 
@@ -98,7 +106,7 @@
   transform-origin: 0 0;
   block-size: 2px;
   background-color: var(--accent-color);
-  transition: 0.3s;
+  transition: transform 0.3s;
 }
 
 .theme-menu__button:focus-visible:after {
@@ -148,7 +156,7 @@
     1px 0 var(--shadow-color), 0 1px var(--shadow-color);
   opacity: 0.5;
   text-transform: uppercase;
-  background-blend-mode: hard-light 50%;
+  background-blend-mode: hard-light;
 }
 
 @supports (
@@ -181,9 +189,8 @@
   display: block;
   object-fit: cover;
   object-position: center;
-  block-size: 100%;
   inline-size: 100%;
-
+  aspect-ratio: 1 / 1;
 }
 
 .card__buttons {
@@ -196,7 +203,7 @@
 .card__like-button {
   border:  var(--border);
   inline-size: 130px;
-  block-size: 38px;
+  block-size: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -204,6 +211,9 @@
 
 .card__icon-button {
   align-self: center;
+  transition: border-color 0.3s ease;
+  border: 2px solid transparent;
+
 }
 
 .button__text {
@@ -214,8 +224,35 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: var(--border);
+  border-color: var(--accent-color);
 }
+
+.button-animation {
+  transition: box-shadow 0.3s;
+}
+
+.button-animation:focus-visible {
+  box-shadow: 2px 2px var(--accent-color);
+}
+
+.button-animation::before {
+  content: "";
+  display: block;
+  position: absolute;
+  inline-size: 100%;
+  block-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.button-animation:hover::before {
+  transform: scaleX(1);
+}
+
 
 .popup-button {
   display: flex;
@@ -258,8 +295,7 @@
 }
 
 .popup::backdrop {
-  background-color: rgb(0 0 0 / 0.3);
-  backdrop-filter: brightness(25%);
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 .popup__floppy {
@@ -289,6 +325,14 @@
   justify-content: center;
   inline-size: 100%;
   color: var(--accent-color);
+}
+
+.button-floppy:hover {
+
+}
+
+.button-floppy:focus-visible {
+
 }
 
 @media (width <= 375px) {
