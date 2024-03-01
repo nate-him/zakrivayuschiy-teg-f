@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark " />
     <title>Закрывающий тег</title>
     <link rel="icon" href="./images/favicon.ico" sizes="any" />
@@ -19,7 +18,7 @@
   </head>
   <body class="page">
     <header class="header">
-      <span class="header__logo">&lt;/html&gt;</span>
+      <a class="header__logo">&lt;/html&gt;</a>
       <h1 class="header__title">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
@@ -63,7 +62,7 @@
                   class="card__img"
                 >
               </picture>
-              <p class="card__label">&lt;/html&gt;</p>
+              <span class="card__label">&lt;/html&gt;</span>
             </div>
             <div class="card__content">
               <div class="card__text">
@@ -108,7 +107,7 @@
                   class="card__img brightness"
                 >
               </picture>
-              <p class="card__label">&lt;/html&gt;</p>
+              <span class="card__label">&lt;/html&gt;</span>
             </div>
             <div class="card__content">
               <div class="card__text">
@@ -153,7 +152,7 @@
                    class="card__img contrast"
                 >
               </picture>
-              <p class="card__label">&lt;css&gt;</p>
+              <span class="card__label">&lt;css&gt;</span>
             </div>
             <div class="card__content">
               <div class="card__text">
@@ -198,7 +197,7 @@
                    class="card__img blur"
                 >
               </picture>
-              <p class="card__label">&lt;desigions&gt;</p>
+              <span class="card__label">&lt;desigions&gt;</span>
             </div>
             <div class="card__content">
               <div class="card__text">
@@ -243,7 +242,7 @@
                    class="card__img opacity"
                 >
               </picture>
-              <p class="card__label">care</p>
+              <span class="card__label">care</span>
             </div>
             <div class="card__content">
               <div class="card__text">
@@ -288,7 +287,7 @@
                    class="card__img grayscale"
                 >
               </picture>
-              <p class="card__label">&lt;support&gt;</p>
+              <span class="card__label">&lt;support&gt;</span>
             </div>
             <div class="card__content">
               <div class="card__text">
@@ -333,7 +332,7 @@
                    class="card__img invert"
                 >
               </picture>
-              <p class="card__label">&lt;lifes-style: none;&gt;</p>
+              <span class="card__label">&lt;lifes-style: none;&gt;</span>
             </div>
             <div class="card__content">
               <div class="card__text">
@@ -378,7 +377,7 @@
                   class="card__img multiple"
                 >
               </picture>
-              <p class="card__label">&lt;experience&gt;</p>
+              <span class="card__label">&lt;experience&gt;</span>
             </div>
             <div class="card__content">
               <div class="card__text">
@@ -413,20 +412,20 @@
       <button
             class="popup-button button button-animation"
             type="button"
-            onclick="window['dialog-ok'].showModal();"
-            aria-controls="dialog-ok">
+            onclick="window['dialog-floppy'].showModal();"
+            aria-controls="dialog-floppy">
         <svg class="floppy" viewBox="0 0 40 40">
             <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
-      <dialog id="dialog-ok" class="popup">
+      <dialog id="dialog-floppy" class="popup">
         <svg class="popup__floppy" viewBox="0 0 40 40">
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span class="popup__text">Вставьте дискету, чтобы продолжить</span>
         <form method="dialog" class="popup__form">
-          <button type="submit" class="button button-ok">Ок</button>
+          <button type="submit" class="button button-floppy">Ок</button>
         </form>
       </dialog>
     </main>

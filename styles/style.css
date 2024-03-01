@@ -281,7 +281,7 @@
   justify-self: stretch;
 }
 
-.button-ok {
+.button-floppy {
   border: var(--border);
   padding-block: 10px;
   text-transform: uppercase;
